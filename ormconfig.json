@@ -3,7 +3,7 @@
   "database": "data/database.sqlite3",
   "synchronize": false,
   "entities": ["dist/entities/**/*.entity.js"],
-  "migrations": ["dist/migrations/**/*.js"],
+  "migrations": ["dist/migration/**/*.js"],
   "cli": {
     "entitiesDir": "src/entity",
     "migrationsDir": "src/migration"
