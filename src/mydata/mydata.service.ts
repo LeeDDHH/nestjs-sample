@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { Repository } from 'typeorm';
+import { InsertResult, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Mydata } from '../entities/mydata.entity';
 
@@ -13,5 +13,9 @@ export class MydataService {
 
   getAll = (): Promise<Mydata[]> => {
     return this.mydataRepository.find();
+  };
+
+  addMydata = (data: any): Promise<InsertResult> => {
+    return this.mydataRepository.insert(data);
   };
 }
